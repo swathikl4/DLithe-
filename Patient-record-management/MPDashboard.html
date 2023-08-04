@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Doctor Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="MPDashboard.css">
+</head>
+<body>
+  <header>
+    <h1>Doctor Dashboard</h1>
+    <a href="#" id="contact us">Contact us</a>
+    <a href="#" id="logout">About</a>
+    <a href="#" id="about">Logout</a>
+    
+  </header>
+
+  <div class="container">
+    <nav class="sidebar">
+      <ul>
+        <li><a href="#" data-section="appointments">Patient Records Appointments</a></li>
+        <li><a href="#" data-section="appointments">View Appointments</a></li>
+        <li><a href="#" data-section="appointment-history">View Appointment History</a></li>
+        
+      </ul>
+    </nav>
+
+    <main>
+      <section id="patient-records" class="active">
+        <h2>Patient Records</h2>
+        <!-- Display patient records here -->
+      </section>
+
+      <section id="appointments">
+        <h2>Appointments</h2>
+        <!-- Display appointments here -->
+      </section>
+
+      <section id="appointment-history">
+        <h2>Appointment History</h2>
+        <!-- Display appointment history here -->
+      </section>
+
+      <section id="about">
+        <h2>About</h2>
+        <!-- Display about content here -->
+      </section>
+
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <!-- Display contact information here -->
+      </section>
+    </main>
+  </div>
+
+  <div class="overlay"></div>
+
+  <script src="MPDashboard.js"></script>
+</body>
+</html>

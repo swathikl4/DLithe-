@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://wallpaperaccess.com/full/899156.jpg');
+    background-size: contain;
+    background-position: center;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+  
+  header a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .container {
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  
+  .container.show {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  nav.sidebar {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  nav.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav.sidebar ul li {
+    margin-bottom: 10px;
+  }
+  
+  nav.sidebar ul li a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  nav.sidebar ul li a:hover {
+    background-color: #0066cc;
+    color: #fff;
+  }
+  
+  main {
+    padding: 20px;
+    flex-grow: 1;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.3s, transform 0.3s;
+    text-align: center;
+  }
+  
+  main.show {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  section {
+    display: none;
+  }
+  
+  section.active {
+    display: block;
+  }
+  
+  section h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: none;
+  }
+  
+  .overlay.show {
+    display: block;
+  }
+  
+  /* Popup animation */
+  @keyframes popup {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .popup {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: popup 0.3s forwards;
+    z-index: 3;
+  }
+  
